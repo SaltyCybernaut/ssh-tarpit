@@ -10,7 +10,7 @@ Are you tired of having your server logs cluttered with failed SSH login attempt
 
 ### Step 2 - get these delicious bits on your computer
 ```bash
-git clone --branch v1.0 --recurse-submodules https://github.com/SaltyCybernaut/ssh-tarpit.git
+git clone --branch v1.1 --recurse-submodules https://github.com/SaltyCybernaut/ssh-tarpit.git
 cd ssh-tarpit
 ```
 
