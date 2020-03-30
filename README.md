@@ -1,16 +1,16 @@
 ﻿# Introduction
 
-Are you tired of having your server logs cluttered with failed SSH login attempts from script kiddies? Would you like to enact some petty revenge again those ne'er-do-wells? If you answered yes, then you are in the right place. [Christopher Wellons](https://github.com/skeeto) graciously created a tiny C program that pretends to be a SSH server which takes advantage of the fact that SSH banners have no size limit in the SSH specification. This allows the server to send a n endless stream of bytes as the banner and the client waits indefinitely for the server to finish. I have taken Chris' work and make it into a docker container for easy deployment.
+Are you tired of having your server logs cluttered with failed SSH login attempts from script kiddies? Would you like to enact some petty revenge again those ne'er-do-wells? If you answered yes, then you are in the right place. [Christopher Wellons](https://github.com/skeeto) graciously created a tiny C program that pretends to be a SSH server which takes advantage of the fact that SSH banners have no size limit in the SSH specification. This allows the server to send an endless stream of bytes as the banner and the client waits indefinitely for the server to finish. I have taken Chris' work and make it into a docker container for easy deployment.
 
 ## Getting Started
 
 ### Step 0 - [install docker](https://docs.docker.com/install)
 
-### Step 1 - [change your real ssh server to a non-standard port]()
+### Step 1 - [change your real ssh server to a non-standard port](https://man.openbsd.org/sshd#p)
 
 ### Step 2 - get these delicious bits on your computer
 ```bash
-git clone --branch v1.0 --recurse-submodules https://github.com/SaltyCybernaut/ssh-tarpit.git
+git clone --branch v1.1 --recurse-submodules https://github.com/SaltyCybernaut/ssh-tarpit.git
 cd ssh-tarpit
 ```
 
@@ -21,7 +21,7 @@ cd ssh-tarpit
 
 ### Step 4 - test on localhost
 ```bash
-# open a second terminal an execute
+# open a second terminal and execute
 ./deploy.sh 127.0.0.1 2222 dev ssh-tarpit-dev
   
 # back in the first terminal execute
